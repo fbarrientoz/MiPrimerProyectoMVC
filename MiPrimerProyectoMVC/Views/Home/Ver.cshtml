@@ -1,0 +1,17 @@
+﻿@model Model.Alumno
+@{
+    ViewBag.Title = "Ver";
+}
+
+@using (Html.BeginForm("Guardar", "Home", FormMethod.Post))
+{
+<div class="container">
+    <h2>Agregar Alumno</h2>
+    <div class="mb-3">
+        @Html.LabelFor(x => x.nombre)
+        @Html.TextAreaFor(x => x.nombre)
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+</div>
+}
